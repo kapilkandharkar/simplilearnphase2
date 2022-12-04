@@ -1,0 +1,45 @@
+package pages;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class LandingPage {
+	
+	private Actions actions;	
+	private WebDriverWait wait;
+	
+	@FindBy(id = "location")
+	private WebElement location;
+	
+	@FindBy(xpath = "//a[contains(@href,'bangalore')]")
+	private WebElement locationBangalore;
+	
+	@FindBy(xpath = "//button[contains(@tabindex,2)]")
+	private WebElement firstDeliveryLocationAfterSearch;
+	
+	//   //div[contains(@id,'all_restaurants')]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]
+	
+	
+	public LandingPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+		actions = new Actions(driver);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	}
+	
+	public void clickBangalore() {
+		locationBangalore.click();
+	}
+	
+	public void selectDeliveryLocation(String locationName) {
+		location.sendKeys(locationName);
+		wait.until(ExpectedConditions.visibilityOf(firstDeliveryLocationAfterSearch));
+		firstDeliveryLocationAfterSearch.click();
+	}
+}

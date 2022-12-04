@@ -1,0 +1,9 @@
+package testscripts;
+
+import pages.LandingPage;
+
+public class OrderFoodTest extends BaseTest {
+
+	LandingPage landingPage = new LandingPage(driver);
+	landingPage.clickBangalore();
+}

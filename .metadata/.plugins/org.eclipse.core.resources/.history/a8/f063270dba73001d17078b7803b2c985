@@ -1,0 +1,29 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class RestaurantPage {
+
+	@FindBy(xpath = "(//div[contains(@class, '_1RPOp')])[0]")
+	private WebElement firstDishTopPicks;
+	
+	@FindBy(xpath = "//button[contains(text(),'Checkout')]")
+	private WebElement buttonCheckout;
+
+	public RestaurantPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
+	
+	public void clickAddFromTopPicks()
+	{
+		firstDishTopPicks.click();
+	}
+	
+	public void clickCheckoutButton()
+	{
+		buttonCheckout.click();
+	}
+}

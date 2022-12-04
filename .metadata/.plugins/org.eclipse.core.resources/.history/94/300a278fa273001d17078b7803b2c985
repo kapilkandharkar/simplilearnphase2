@@ -1,0 +1,42 @@
+package in.amazon.pages;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class LandingPage {
+	// Structure of code in Page Class - 
+	// Locate the web element
+	// Create a method to take action on located element
+	// call the created method in test class
+	
+	private Actions actions;
+	
+	private WebDriverWait wait;
+	
+	@FindBy(linkText = "Mobiles")
+	private WebElement mobiles;
+	
+	@FindBy(xpath = "//a[contains(@href,'bangalore')]")
+	private WebElement locationBangalore;
+	
+	
+	public LandingPage(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+		actions = new Actions(driver);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+	}
+	
+	public void clickLocationBangalore() {
+		locationBangalore.click();
+	}
+	
+
+
+}

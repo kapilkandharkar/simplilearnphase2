@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-04T18:37:01 IST" name="Default suite" finished-at="2022-12-04T18:37:11 IST" duration-ms="10220">
+    <groups>
+    </groups>
+    <test started-at="2022-12-04T18:37:01 IST" name="Default test" finished-at="2022-12-04T18:37:11 IST" duration-ms="10220">
+      <class name="in.redbus.testscripts.BookTicketTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:in.redbus.testscripts.BookTicketTest@769e7ee8]" started-at="2022-12-04T18:37:01 IST" name="launchApplication" finished-at="2022-12-04T18:37:04 IST" duration-ms="3760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="BookTicketTest()[pri:0, instance:in.redbus.testscripts.BookTicketTest@769e7ee8]" started-at="2022-12-04T18:37:04 IST" name="BookTicketTest" finished-at="2022-12-04T18:37:11 IST" duration-ms="6437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BookTicketTest -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:in.redbus.testscripts.BookTicketTest@769e7ee8]" started-at="2022-12-04T18:37:11 IST" name="closeApplication" finished-at="2022-12-04T18:37:11 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- in.redbus.testscripts.BookTicketTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

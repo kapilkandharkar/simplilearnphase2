@@ -1,0 +1,15 @@
+package testscripts;
+
+import org.testng.annotations.Test;
+
+import pages.LandingPage;
+
+public class OrderFoodTest extends BaseTest {
+	
+	@Test
+	public void orderFoodBangalore() {
+		LandingPage landingPage = new LandingPage(driver);
+		landingPage.selectDeliveryLocation("Pune");
+	}
+
+}
